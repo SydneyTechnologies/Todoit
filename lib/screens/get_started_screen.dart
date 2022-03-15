@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:todoit/constants.dart';
+import 'package:todoit/styles/app_strings.dart';
 import 'package:todoit/screens/login_screen.dart';
-import 'package:todoit/widgets.dart';
+import 'package:todoit/styles/font_style.dart';
+import 'package:todoit/widgets/widgets.dart';
 
 class GetStartedScreen extends StatelessWidget {
   const GetStartedScreen({Key? key}) : super(key: key);
@@ -13,7 +14,7 @@ class GetStartedScreen extends StatelessWidget {
       body: Column(
         children: [
           Container(
-            child: Image.asset("images/middle_graphics.png"),
+            child: Image.asset("assets/images/middle_graphics.png"),
             padding: EdgeInsets.fromLTRB(70, 120, 70, 50),
           ),
           Text(
@@ -24,7 +25,7 @@ class GetStartedScreen extends StatelessWidget {
             height: 20,
           ),
           Text(
-            kWelcomeText,
+            AppString.kWelcomeText,
             textAlign: TextAlign.center,
           ),
           SizedBox(

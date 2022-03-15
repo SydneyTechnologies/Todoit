@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'constants.dart';
+import 'package:todoit/styles/app_colors.dart';
 
 class wGeneralButton extends StatefulWidget {
   wGeneralButton(this.buttonText, this.buttonPress);
@@ -21,7 +21,7 @@ class _wGeneralButtonState extends State<wGeneralButton> {
         },
         child: Text(widget.buttonText),
         style: ElevatedButton.styleFrom(
-            primary: kAppColor, minimumSize: Size(double.infinity, 50)),
+            primary: AppColors.kAppColor, minimumSize: Size(double.infinity, 50)),
       ),
     );
   }

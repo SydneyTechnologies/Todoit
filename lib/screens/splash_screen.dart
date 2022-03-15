@@ -48,7 +48,7 @@ class _SplashScreenState extends State<SplashScreen>
           child: ScaleTransition(
             scale: scaleUp,
             child: Image.asset(
-              "images/todoit_logo.png",
+              "assets/images/todoit_logo.png",
             ),
           ),
         ),

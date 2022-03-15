@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:todoit/constants.dart';
-import 'package:todoit/widgets.dart';
+import 'package:todoit/styles/font_style.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -12,7 +11,7 @@ class LoginScreen extends StatelessWidget {
       body: Column(
         children: [
           Container(
-            child: Image.asset("images/middle_graphics.png"),
+            child: Image.asset("assets/images/middle_graphics.png"),
             padding: EdgeInsets.fromLTRB(70, 120, 70, 50),
           ),
           Text(
