@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:todoit/screens/bottomNavigation/bottom_navigation_screen.dart';
 import 'package:todoit/screens/get_started_screen.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -20,7 +21,7 @@ class _SplashScreenState extends State<SplashScreen>
 
   void toLoginScreen() async {
     await Future.delayed(Duration(milliseconds: 200), () {
-      Navigator.pushReplacementNamed(context, GetStartedScreen.id);
+      Navigator.pushReplacementNamed(context, BottomNavigationScreen.id);
     });
   }
 
