@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:todoit/screens/screens.dart';
 import 'package:todoit/styles/app_colors.dart';
 import 'package:todoit/styles/font_style.dart';
 
@@ -40,7 +41,10 @@ class StartScreen extends StatelessWidget {
                 height: 50,
               ),
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => TodoitPage()));
+                },
                 child: Text(
                   "Get Started",
                   style: todoTextStyles.subtitle.copyWith(color: Colors.white),
