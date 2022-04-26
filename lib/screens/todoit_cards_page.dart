@@ -18,7 +18,13 @@ class TodoitPage extends StatelessWidget {
         body: Container(
           child: Column(
             children: [
+              const SizedBox(
+                height: 10,
+              ),
               TodoAppBar(),
+              const SizedBox(
+                height: 15,
+              ),
               TodoNavigationBar(),
             ],
           ),
@@ -89,7 +95,8 @@ class TodoNavigationBar extends StatelessWidget {
             children: [
               Text(
                 "All",
-                style: todoTextStyles.subtitle,
+                style:
+                    todoTextStyles.subtitle.copyWith(color: Color(0xffEFAC2E)),
               ),
               const SizedBox(
                 height: 5,
@@ -106,7 +113,7 @@ class TodoNavigationBar extends StatelessWidget {
               const SizedBox(
                 height: 5,
               ),
-              TargetUnderline()
+              //TargetUnderline()
             ],
           )
         ],
@@ -123,9 +130,9 @@ class TargetUnderline extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 40,
+      width: 25,
       height: 2,
-      color: Colors.grey,
+      color: Color(0xffEFAC2E),
     );
   }
 }
