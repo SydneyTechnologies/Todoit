@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:todoit/screens/get_started_screen.dart';
 
+import 'cards.dart';
+
 class SplashScreen extends StatefulWidget {
   static String id =
       "splash-screen"; // this is the ID present within each screen so navigator can be used to identify screens
@@ -20,7 +22,7 @@ class _SplashScreenState extends State<SplashScreen>
 
   void toLoginScreen() async {
     await Future.delayed(Duration(milliseconds: 200), () {
-      Navigator.pushReplacementNamed(context, GetStartedScreen.id);
+      Navigator.pushReplacementNamed(context, Cards.id);
     });
   }
 
