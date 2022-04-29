@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
-import 'package:todoit/styles/app_colors.dart';
 import 'package:todoit/widgets/todo_card.dart';
+import '../styles/constants.dart';
 
 class Cards extends StatefulWidget {
   static String id = "CardScreen";
@@ -34,12 +34,9 @@ class _CardsState extends State<Cards> {
                 ),
               ],
             ),
-            childrenDelegate: SliverChildBuilderDelegate(
-                    (context, index) {
-                  return TodoCard();
-                },
-                childCount: 5
-            ),
+            childrenDelegate: SliverChildBuilderDelegate((context, index) {
+              return TodoCard();
+            }, childCount: 5),
           ),
         ),
       ),

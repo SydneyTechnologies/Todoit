@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:todoit/styles/app_colors.dart';
-import 'package:todoit/styles/font_style.dart';
+import 'package:todoit/styles/constants.dart';
 
 class TodoitPage extends StatelessWidget {
   const TodoitPage({Key? key}) : super(key: key);

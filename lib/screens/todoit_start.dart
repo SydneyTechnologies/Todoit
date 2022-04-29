@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:todoit/screens/screens.dart';
-import 'package:todoit/styles/app_colors.dart';
-import 'package:todoit/styles/font_style.dart';
+import 'package:todoit/styles/constants.dart';
 
 class StartScreen extends StatelessWidget {
   const StartScreen({Key? key}) : super(key: key);

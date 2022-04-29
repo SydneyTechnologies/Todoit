@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:todoit/styles/app_colors.dart';
+import 'package:todoit/styles/constants.dart';
 
 class TodoCard extends StatelessWidget {
   const TodoCard({Key? key}) : super(key: key);
