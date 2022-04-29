@@ -15,6 +15,7 @@ class AppColors {
   static const Color allBGColor = Color(0xff1F1D2B);
   static const Color dateColor = Color(0xff91919A);
   static const Color descriptionColor = Color(0xff91919A);
+  static const Color folderColor = Color(0xFFFFC14D);
 }
 
 class AppString {

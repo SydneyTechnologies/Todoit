@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:todoit/screens/screens.dart';
 import 'package:todoit/styles/constants.dart';
+import 'package:page_transition/page_transition.dart';
 
 class StartScreen extends StatelessWidget {
   const StartScreen({Key? key}) : super(key: key);
@@ -41,8 +42,15 @@ class StartScreen extends StatelessWidget {
               ),
               ElevatedButton(
                 onPressed: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => TodoitPage()));
+                  Navigator.push(
+                      context,
+                      PageTransition(
+                          child: TodoitPage(),
+                          type: PageTransitionType.rightToLeft)
+                      // MaterialPageRoute(
+                      //   builder: (context) => TodoitPage(),
+                      // ),
+                      );
                 },
                 child: Text(
                   "Get Started",

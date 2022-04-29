@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:todoit/screens/cards.dart';
 import 'package:todoit/styles/constants.dart';
 
 class TodoitPage extends StatelessWidget {
@@ -7,131 +8,43 @@ class TodoitPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: Scaffold(
-        backgroundColor: AppColors.kAppColor,
-        floatingActionButton: FloatingActionButton(
-          onPressed: () {},
-          backgroundColor: AppColors.kButtonColor,
-          child: Icon(Icons.add),
-        ),
-        body: Container(
-          child: Column(
-            children: [
-              const SizedBox(
-                height: 10,
+      child: DefaultTabController(
+          length: 2,
+          child: Scaffold(
+              appBar: AppBar(
+                backgroundColor: AppColors.kAppColor,
+                elevation: 0,
+                toolbarHeight: 70,
+                title: Text(
+                  "Todo",
+                  style: todoTextStyles.Heading,
+                ),
+                bottom: const TabBar(
+                    indicatorColor: AppColors.folderColor,
+                    unselectedLabelColor: Colors.white,
+                    labelColor: AppColors.folderColor,
+                    indicatorWeight: 3,
+                    indicatorPadding:
+                        EdgeInsets.symmetric(horizontal: 80, vertical: 10),
+                    tabs: [
+                      Tab(child: Text("All")),
+                      Tab(child: Text("Folder"))
+                    ]),
               ),
-              TodoAppBar(),
-              const SizedBox(
-                height: 15,
+              backgroundColor: AppColors.kAppColor,
+              floatingActionButton: FloatingActionButton(
+                onPressed: () {},
+                backgroundColor: AppColors.kButtonColor,
+                child: Icon(Icons.add),
               ),
-              TodoNavigationBar(),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
-}
-
-class TodoAppBar extends StatelessWidget {
-  const TodoAppBar({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.all(8.0),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Padding(
-            padding: const EdgeInsets.only(left: 8.0),
-            child: Text(
-              "Todo",
-              style: todoTextStyles.Heading,
-            ),
-          ),
-          const Spacer(),
-          TextButton(
-              onPressed: () {},
-              child: Text(
-                "Edit",
-                style: todoTextStyles.subtitle,
-              )),
-          IconButton(
-              constraints: BoxConstraints(),
-              onPressed: () {},
-              icon: Icon(
-                Icons.search,
-                color: Colors.grey,
-                size: 20,
-              )),
-          IconButton(
-            constraints: BoxConstraints(),
-            onPressed: () {},
-            icon: Icon(
-              Icons.menu,
-              color: Colors.grey,
-              size: 20,
-            ),
-          )
-        ],
-      ),
-    );
-  }
-}
-
-class TodoNavigationBar extends StatelessWidget {
-  const TodoNavigationBar({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      height: 50,
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
-        children: [
-          Column(
-            children: [
-              Text(
-                "All",
-                style:
-                    todoTextStyles.subtitle.copyWith(color: Color(0xffEFAC2E)),
-              ),
-              const SizedBox(
-                height: 5,
-              ),
-              TargetUnderline()
-            ],
-          ),
-          Column(
-            children: [
-              Text(
-                "Categories",
-                style: todoTextStyles.subtitle,
-              ),
-              const SizedBox(
-                height: 5,
-              ),
-              //TargetUnderline()
-            ],
-          )
-        ],
-      ),
-    );
-  }
-}
-
-class TargetUnderline extends StatelessWidget {
-  const TargetUnderline({
-    Key? key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      width: 25,
-      height: 2,
-      color: Color(0xffEFAC2E),
+              body: TabBarView(children: [
+                Cards(),
+                Center(
+                    child: Text(
+                  "NextPage",
+                  style: todoTextStyles.Heading,
+                ))
+              ]))),
     );
   }
 }
